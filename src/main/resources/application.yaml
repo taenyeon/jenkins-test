@@ -1,0 +1,16 @@
+server:
+  port: ${SERVICE_PORT:8080}
+spring:
+  datasource:
+      hikari:
+          connection-timeout: 5000
+          validation-timeout: 1000
+          maximum-pool-size: 20
+  jpa:
+      properties:
+          hibernate:
+              format_sql: true
+              use_sql_comments: true
+      hibernate:
+          naming:
+              physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
