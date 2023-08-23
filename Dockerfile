@@ -6,3 +6,4 @@ RUN mkdir /home/testServer
 RUN pwd
 WORKDIR /home/testServer
 COPY /build/libs/*.jar test.jar
+ENTRYPOINT ["java","-jar","/test.jar"]
