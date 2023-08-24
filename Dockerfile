@@ -6,4 +6,4 @@ RUN mkdir /home/testServer
 RUN pwd
 WORKDIR /home/testServer
 COPY /build/libs/*.jar test.jar
-ENTRYPOINT ["java","-jar","/home/testServer/test.jar"]
+ENTRYPOINT ["java","-jar","-Dspring.profiles.active=${PROFILE}","/test.jar"]
