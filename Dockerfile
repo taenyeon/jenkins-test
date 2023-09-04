@@ -1,9 +1,9 @@
 FROM amazoncorretto:11-alpine-jdk
 
 ENV TZ=Asia/Seoul
-ENV SERVICE_PORT=8080
-RUN mkdir /home/testServer
+ENV SERVICE_PORT=${SERVER_PORT}
+RUN mkdir /home/${SERVER_NAME}
+WORKDIR /home/${SERVER_NAME}
 RUN pwd
-WORKDIR /home/testServer
-COPY /build/libs/*.jar test.jar
-ENTRYPOINT ["java","-jar","-Dspring.profiles.active=dev","/home/testServer/test.jar"]
+COPY /build/libs/*.jar ${SERVER_NAME}.jar
+ENTRYPOINT ["java","-jar","-Dspring.profiles.active=${SPRING_PROFILE}","/home/testServer/${SERVER_NAME}.jar"]

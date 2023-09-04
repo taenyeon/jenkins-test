@@ -1,6 +1,8 @@
 server:
-  port: ${SERVICE_PORT:8080}
+  port: ${SERVICE_PORT:8001}
 spring:
+  application:
+    name: test-api
   datasource:
       hikari:
           connection-timeout: 5000
@@ -14,3 +16,11 @@ spring:
       hibernate:
           naming:
               physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8000/eureka/
+  instance:
+    hostname: localhost
