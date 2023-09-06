@@ -2,6 +2,6 @@ spring:
   profiles: local
   datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: ${DB_URL:jdbc:mysql://112.172.130.76:3306}/test
-      username: ${DB_USERNAME:root}
-      password: ${DB_PASSWORD:Test852852!}
+      url: ${DB_URL:url}/test
+      username: ${DB_USERNAME:username}
+      password: ${DB_PASSWORD:password}
