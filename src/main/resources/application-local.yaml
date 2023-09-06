@@ -1,7 +1,0 @@
-spring:
-  profiles: local
-  datasource:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: ${DB_URL:url}/test?useSSL=false
-      username: ${DB_USERNAME:username}
-      password: ${DB_PASSWORD:password}

@@ -1,5 +1,7 @@
 spring:
-  profiles: dev
+  config:
+    activate:
+      on-profile: dev
   datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: ${DB_URL:url}/test?useSSL=false
