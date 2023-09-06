@@ -4,6 +4,6 @@ spring:
       on-profile: dev
   datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: ${DB_URL:url}/test?useSSL=false
+      url: ${DB_URL:url}/test?useSSL=false&characterEncoding=UTF-8&serverTimeZone=Asia/Seoul
       username: ${DB_USERNAME:username}
       password: ${DB_PASSWORD:password}
